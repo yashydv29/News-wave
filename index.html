@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="logo.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                    <ul class="nav">
+                    <li><a href="#">Home</li>
+                    <li><a href="#"  onclick="onNavItemClick('trending')">For You</a></li>
+                    <li ><a href="#"  onclick="onNavItemClick('blogs')">Blogs</a></li>
+                    <div class="dropdown">
+                        <a class="dropbtn">Categories</a>
+                        <div class="dropdown-content">
+                      <a href="#" onclick="onNavItemClick('ipl')">IPL</a>
+                      <a href="#" onclick="onNavItemClick('international')">International</a>
+                      <a href="#" onclick="onNavItemClick('sports')">Sports</a>
+                      <a href="#" onclick="onNavItemClick('food')">Food</a>
+                      <a href="#" onclick="onNavItemClick('Fashion')">Fashion</a>
+                      <a href="#" onclick="onNavItemClick('anime')">Anime</a>
+                      <a href="#" onclick="onNavItemClick('music')">Music</a>
+                      <a href="#" onclick="onNavItemClick('technology')">Technology</a>
+                      <a href="#" onclick="onNavItemClick('spritual')">Spritual</a>
+                        </div>
+                    </div>
+                  </ul>
+
+            </div>
+
+            <div class="search-bar flex">
+                <input id="text" type="text" class="news-input" placeholder="search news">
+                <button id="search-button" class="search-button">Explore</button>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main>
+        <div class="scrolling_text">
+            <div class="text">
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+            </div>
+            <div class="text">
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+                <span>Read Your Intrest</span>
+            </div>
+        </div>
+
+        <div class="cards-container container flex" id="cards-container">
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/custom.js"></script>
+   </body>
+</html>

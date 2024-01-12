@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: black;
+    --secondary-text-color:black;
+    --accent-color: black;
+    --accent-color-dark: black;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color:white;			;
+    /* box-shadow: 0 0 4px #bbd0e2; */
+    color: white;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    font-size: large;
+}
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+.nav {
+    list-style: none;
+    padding: 0;
+   
+  }
+  .nav-links{
+    color: white;
+  }
+  .nav li {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .dropbtn {
+    color: rgb(54, 53, 53);
+    padding: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    display: block;
+    color: #333;
+    padding: 10px 12px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.company-logo img {
+    width: 120px;
+}
+.nav-links ul a{
+    color: black;
+}
+.nav-links ul a:hover{
+    color: blue;
+}
+
+.nav-links ul {
+    gap: 16px;
+    display: flex;
+    color: #ffffff;
+
+}
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+    color: blue;
+}
+
+.nav-item.active {
+    color:black;
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+.scrolling_text {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+.text {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: blue;
+}
+.text span {
+    margin: 0 40px;
+}
+@keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+.text {
+    background-color: rgb(48, 45, 45);
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(61, 61, 241);
+    animation: animate_text 30s linear infinite; 
+}
+
+.card {
+    margin-top: 40px;
+    width: 370px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: azure;
+    transform: scale(1.02);
+     transition: all 0.3 ease;
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+
